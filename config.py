@@ -8,9 +8,11 @@ GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 PURPLE = (255, 0, 255)
 ORANGE = (255, 95, 31)
-
+YELLOW = (255, 255, 0)
+FOREST_GREEN = (50, 140, 103)
+BROWN = (196, 164, 132)
 # Game window dimentions
-WINDOW_WIDTH = 800
+WINDOW_WIDTH = 900
 WINDOW_HEIGHT = 600
 
 # Window title (caption)
