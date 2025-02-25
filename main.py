@@ -30,12 +30,19 @@ def draw_circle(screen, center, radius, color, thickness):
 def draw_line(screen, color, start_pos, end_pos, thickness):
     pygame.draw.line(screen, color, start_pos, end_pos, thickness)
 
+def draw_polygon(screen, color, points, thickness=0):
+    pygame.draw.polygon(screen, color, points, thickness)
+
 def main():
 
     screen = init_game()  # Initialize the game and get the screen
     clock = pygame.time.Clock() # Initialize the clock objecct
     
+    points5 = [(20, 10), (31, 25), (16, 20), (30, 60), (55, 65)]
 
+    points4 = [(900, 10), (900, 20), (800, 40), (700, 60), (760, 70)]
+
+    points3 = [(25, 550), (70, 500), (25, 400), (89, 500), (25, 600)]
  
     # Main game loop
     running = True
@@ -62,6 +69,12 @@ def main():
         draw_circle(screen, [394, 200], 75, config.BROWN, 0)
 
         draw_circle(screen, [455, 200], 75, config.YELLOW, 0)
+
+        draw_polygon(screen, config.RED, points5, 0)
+
+        draw_polygon(screen, config.BLUE, points4, 0)
+
+        draw_polygon(screen, config.BLACK, points3, 5)
 
         pygame.display.flip()  # Update the display
 
